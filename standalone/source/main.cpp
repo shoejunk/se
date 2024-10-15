@@ -1,10 +1,9 @@
-import stk.tpl;
+import se;
 
-using namespace stk;
+using namespace se;
 
 int main()
 {
-	c_template tpl;
-	tpl.go_template();
+    vector<int> v;
 	return 0;
 }
