@@ -16,4 +16,9 @@ export namespace se
 	using iterator = std::iterator;
 	using iterator_traits = std::iterator_traits;
 	using ptrdiff_t = std::ptrdiff_t;
+	using uint32_t = std::uint32_t;
+	using uint64_t = std::uint64_t;
+	using int32_t = std::int32_t;
+	using int64_t = std::int64_t;
+	using size_t = std::size_t;
 };
