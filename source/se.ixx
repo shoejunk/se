@@ -7,6 +7,9 @@ export namespace se
 	using vector = std::vector<T>;
 	template<typename T, size_t N>
 	using array = std::array<T, N>;
+	template<typename T1, typename T2>
+	using is_same = std::is_same<T1, T2>;
+
 	using string = std::string;
 	using forward_iterator_tag = std::forward_iterator_tag;
 	using input_iterator_tag = std::input_iterator_tag;
