@@ -14,8 +14,8 @@ export namespace se
 	using list = std::list<T>;
 	template<typename Key, typename T>
 	using map = std::map<Key, T>;
-	template<typename Key, typename T, typename Compare = std::less<Key>>
-	using unordered_map = std::unordered_map<Key, T, Compare>;
+	template<typename Key, typename T, typename Hash = std::hash<Key>>
+	using unordered_map = std::unordered_map<Key, T, Hash>;
 	template<typename T>
 	using set = std::set<T>;
 	template<typename T>
