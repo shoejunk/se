@@ -119,4 +119,22 @@ export namespace se
 	using uniform_int_distribution = std::uniform_int_distribution<T>;
 	template<typename T>
 	using uniform_real_distribution = std::uniform_real_distribution<T>;
+
+	// Formatting
+	template<typename... Args>
+	using format_string = std::format_string<Args...>;
+
+	using std::format;
+	using std::formatter;
+	using std::basic_format_string;
+	using std::basic_format_parse_context;
+	using std::basic_format_context;
+	using std::format_to;
+	using std::format_to_n;
+	using std::formatted_size;
+	using std::format_error;
+	using std::format_args;
+	using std::make_format_args;
+	using std::vformat;
+	using std::vformat_to;
 };
