@@ -49,6 +49,14 @@ export namespace se
 	using remove_const = std::remove_const<T>;
 	template<typename T>
 	using decay = std::decay<T>;
+	template<typename T>
+	using is_integral = std::is_integral<T>;
+	template<typename T>
+	inline constexpr bool is_integral_v = std::is_integral_v<T>;
+	template<typename T>
+	using is_floating_point = std::is_floating_point<T>;
+	template<typename T>
+	inline constexpr bool is_floating_point_v = std::is_floating_point_v<T>;
 
 	// Iterator Tags/Traits
 	using forward_iterator_tag = std::forward_iterator_tag;
@@ -172,7 +180,7 @@ export namespace se
 	using std::rbegin;
 	using std::rend;
 
-	// I/O manipulators (since you're using cout/cerr)
+	// I/O manipulators
 	using std::endl;
 	using std::flush;
 	using std::hex;
@@ -190,4 +198,45 @@ export namespace se
 	using std::cerr;
 	using std::clog;
 	using std::cin;
+
+	// Numeric Limits
+	template<typename T>
+	using numeric_limits = std::numeric_limits<T>;
+
+	// Math Constants (from <numbers>)
+	namespace numbers = std::numbers;
+
+	// Mathematical Functions
+	using std::abs;
+	using std::sin;
+	using std::cos;
+	using std::tan;
+	using std::asin;
+	using std::acos;
+	using std::atan;
+	using std::atan2;
+	using std::sinh;
+	using std::cosh;
+	using std::tanh;
+	using std::exp;
+	using std::log;
+	using std::log10;
+	using std::pow;
+	using std::sqrt;
+	using std::ceil;
+	using std::floor;
+	using std::round;
+	using std::fmod;
+
+	// Comparison Operations
+	using std::min;
+	using std::max;
+	using std::clamp;
+	using std::less;
+	using std::greater;
+	using std::equal_to;
+
+	// Ratios
+	template<std::intmax_t Num, std::intmax_t Denom = 1>
+	using ratio = std::ratio<Num, Denom>;
 };
