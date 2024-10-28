@@ -98,13 +98,6 @@ export namespace se
 	using std::make_unsigned;
 
 	// Iterator Support
-	using forward_iterator_tag = std::forward_iterator_tag;
-	using input_iterator_tag = std::input_iterator_tag;
-	using output_iterator_tag = std::output_iterator_tag;
-	using random_access_iterator_tag = std::random_access_iterator_tag;
-	using bidirectional_iterator_tag = std::bidirectional_iterator_tag;
-	using iterator = std::iterator;
-	using iterator_traits = std::iterator_traits;
 	using std::iterator_traits;
 	using std::input_iterator_tag;
 	using std::output_iterator_tag;
