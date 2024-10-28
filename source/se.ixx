@@ -1,5 +1,36 @@
+module;
+#include <string>
+#include <vector>
+#include <array>
+#include <deque>
+#include <list>
+#include <map>
+#include <unordered_map>
+#include <set>
+#include <unordered_set>
+#include <stack>
+#include <queue>
+#include <memory>
+#include <iterator>
+#include <algorithm>
+#include <numeric>
+#include <chrono>
+#include <random>
+#include <format>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <exception>
+#include <variant>
+#include <thread>
+#include <mutex>
+#include <numbers>    // For mathematical constants like pi
+#include <concepts>   // For constructible_from, convertible_to, etc.
+#include <cmath>      // For mathematical functions
+#include <ratio>     // For std::ratio
+#include <utility>   // For std::pair
+
 export module se;
-import std;
 
 export namespace se
 {
