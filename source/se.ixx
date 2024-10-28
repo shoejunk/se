@@ -105,6 +105,8 @@ export namespace se
 	using std::stof;
 	using std::stod;
 	using std::stold;
+	using std::getline;    // Also commonly needed
+	using std::literals::string_literals::operator""s;
 
 	// Type Traits
 	template<typename T1, typename T2>
