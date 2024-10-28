@@ -24,6 +24,8 @@ export namespace se
 	using stack = std::stack<T>;
 	template<typename T>
 	using queue = std::queue<T>;
+	template<typename T, size_t N>
+	constexpr size_t array_size(T(&)[N]) { return N; }
 
 	// Smart Pointers
 	template<typename T>
@@ -37,6 +39,31 @@ export namespace se
 	using string = std::string;
 	using string_view = std::string_view;
 	using wstring = std::wstring;
+	using std::strcmp;
+	using std::strlen;
+	using std::strcpy;
+	using std::strncpy;
+	using std::strcat;
+	using std::strncat;
+	using std::memcpy;
+	using std::memset;
+	using std::memmove;
+	using std::atoi;
+	using std::atof;
+	using std::atol;
+	using std::atoll;
+	using std::strtol;
+	using std::strtoul;
+	using std::strtoll;
+	using std::strtoull;
+	using std::strtof;
+	using std::strtod;
+	using std::strtold;
+	using std::to_string;
+	using std::stoi;
+	using std::stof;
+	using std::stod;
+	using std::stold;
 
 	// Type Traits
 	template<typename T1, typename T2>
@@ -131,7 +158,6 @@ export namespace se
 	// Formatting
 	template<typename... Args>
 	using format_string = std::format_string<Args...>;
-
 	using std::format;
 	using std::formatter;
 	using std::basic_format_string;
@@ -203,8 +229,12 @@ export namespace se
 	template<typename T>
 	using numeric_limits = std::numeric_limits<T>;
 
-	// Math Constants (from <numbers>)
+	// Math Constants
 	namespace numbers = std::numbers;
+	using std::numbers::pi;
+	using std::numbers::pi_v;
+	using std::numbers::e;
+	using std::numbers::e_v;
 
 	// Mathematical Functions
 	using std::abs;
@@ -227,6 +257,8 @@ export namespace se
 	using std::floor;
 	using std::round;
 	using std::fmod;
+	template<std::intmax_t Num, std::intmax_t Denom = 1>
+	using ratio = std::ratio<Num, Denom>;
 
 	// Comparison Operations
 	using std::min;
@@ -235,8 +267,4 @@ export namespace se
 	using std::less;
 	using std::greater;
 	using std::equal_to;
-
-	// Ratios
-	template<std::intmax_t Num, std::intmax_t Denom = 1>
-	using ratio = std::ratio<Num, Denom>;
 };
