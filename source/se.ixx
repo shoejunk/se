@@ -137,4 +137,57 @@ export namespace se
 	using std::make_format_args;
 	using std::vformat;
 	using std::vformat_to;
+
+	// Algorithms
+	using std::remove;
+	using std::find;
+	using std::find_if;
+	using std::find_if_not;
+	using std::count;
+	using std::count_if;
+	using std::copy;
+	using std::copy_if;
+	using std::transform;
+	using std::replace;
+	using std::replace_if;
+	using std::fill;
+	using std::generate;
+	using std::sort;
+	using std::stable_sort;
+	using std::lower_bound;
+	using std::upper_bound;
+	using std::binary_search;
+	using std::for_each;
+	using std::all_of;
+	using std::any_of;
+	using std::none_of;
+	using std::equal;
+	using std::accumulate;
+	using std::distance;
+	using std::advance;
+	using std::next;
+	using std::prev;
+	using std::begin;
+	using std::end;
+	using std::rbegin;
+	using std::rend;
+
+	// I/O manipulators (since you're using cout/cerr)
+	using std::endl;
+	using std::flush;
+	using std::hex;
+	using std::dec;
+	using std::oct;
+	using std::fixed;
+	using std::scientific;
+	using std::setw;
+	using std::setfill;
+	using std::setprecision;
+	using std::quoted;
+
+	// Console objects
+	using std::cout;
+	using std::cerr;
+	using std::clog;
+	using std::cin;
 };
