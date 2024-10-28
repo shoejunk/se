@@ -26,6 +26,11 @@ export namespace se
 	using queue = std::queue<T>;
 	template<typename T, size_t N>
 	constexpr size_t array_size(T(&)[N]) { return N; }
+	using std::begin;
+	using std::end;
+	using std::size;
+	using std::empty;
+	using std::data;
 
 	// Smart Pointers
 	template<typename T>
@@ -34,6 +39,11 @@ export namespace se
 	using shared_ptr = std::shared_ptr<T>;
 	template<typename T>
 	using weak_ptr = std::weak_ptr<T>;
+	using std::make_shared;
+	using std::make_unique;
+	using std::dynamic_pointer_cast;
+	using std::static_pointer_cast;
+	using std::const_pointer_cast;
 
 	// Strings
 	using string = std::string;
@@ -69,10 +79,6 @@ export namespace se
 	template<typename T1, typename T2>
 	using is_same = std::is_same<T1, T2>;
 	template<typename T>
-	using remove_reference = std::remove_reference<T>;
-	template<typename T>
-	using remove_pointer = std::remove_pointer<T>;
-	template<typename T>
 	using remove_const = std::remove_const<T>;
 	template<typename T>
 	using decay = std::decay<T>;
@@ -84,8 +90,14 @@ export namespace se
 	using is_floating_point = std::is_floating_point<T>;
 	template<typename T>
 	inline constexpr bool is_floating_point_v = std::is_floating_point_v<T>;
+	using std::remove_cv;
+	using std::remove_reference;
+	using std::remove_pointer;
+	using std::add_pointer;
+	using std::make_signed;
+	using std::make_unsigned;
 
-	// Iterator Tags/Traits
+	// Iterator Support
 	using forward_iterator_tag = std::forward_iterator_tag;
 	using input_iterator_tag = std::input_iterator_tag;
 	using output_iterator_tag = std::output_iterator_tag;
@@ -93,6 +105,18 @@ export namespace se
 	using bidirectional_iterator_tag = std::bidirectional_iterator_tag;
 	using iterator = std::iterator;
 	using iterator_traits = std::iterator_traits;
+	using std::iterator_traits;
+	using std::input_iterator_tag;
+	using std::output_iterator_tag;
+	using std::forward_iterator_tag;
+	using std::bidirectional_iterator_tag;
+	using std::random_access_iterator_tag;
+	using std::input_or_output_iterator;
+	using std::input_iterator;
+	using std::output_iterator;
+	using std::forward_iterator;
+	using std::bidirectional_iterator;
+	using std::random_access_iterator;
 
 	// Integer Types
 	using int8_t = std::int8_t;
@@ -106,12 +130,18 @@ export namespace se
 	using size_t = std::size_t;
 	using ptrdiff_t = std::ptrdiff_t;
 
-	// Utility Types
+	// Utilities
 	using nullptr_t = std::nullptr_t;
 	template<typename T>
 	using optional = std::optional<T>;
 	template<typename... Ts>
 	using variant = std::variant<Ts...>;
+	using std::initializer_list;
+	using std::pair;
+	using std::tuple;
+	using std::index_sequence;
+	using std::make_index_sequence;
+	using std::index_sequence_for;
 
 	// Common Functions
 	using std::move;
@@ -267,4 +297,22 @@ export namespace se
 	using std::less;
 	using std::greater;
 	using std::equal_to;
+
+	// Exception Handling
+	using exception = std::exception;
+	using runtime_error = std::runtime_error;
+	using logic_error = std::logic_error;
+	using out_of_range = std::out_of_range;
+	using invalid_argument = std::invalid_argument;
+
+	// Concepts
+	using std::constructible_from;
+	using std::convertible_to;
+	using std::same_as;
+	using std::derived_from;
+	using std::integral;
+	using std::floating_point;
+	using std::assignable_from;
+	using std::movable;
+	using std::swappable;
 };
